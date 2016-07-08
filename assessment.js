@@ -65,14 +65,13 @@ var snake = {
 };
 
 function hiss(snake) {
-for (var i in snake) {
-  // if (snake[i] === 's') {
-    snake[i] = 's';
-  // }
+	var snakeKeys = Object.keys(snake);
+	for (var i = 0; i < snakeKeys.length; i++) {
+		if (snakeKeys[i].charAt(0) === 's')
+		snake[snakeKeys[i]] = 's';
+	}
+	return snake;
 }
-}
-
-hiss(snake);
 
 //#7 Create an array of strings that are the 6 primary colors (lower-case). Call your array primaryColors
 
